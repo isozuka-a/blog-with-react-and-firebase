@@ -8,13 +8,14 @@ const Home = () => {
             <div className='postHeader'>
                 <h1>タイトル</h1>
             </div>
-        </div>
+        
         <div className='postTextcontainer'>
             エンジニアになりたい
         </div>
         <div className='nameAndDeleteButton'>
             <h3>@akaneCode</h3>
             <button>削除</button>
+        </div>
         </div>
     </div>
   )
