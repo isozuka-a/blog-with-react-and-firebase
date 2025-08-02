@@ -13,6 +13,10 @@ const Home = () => {
         }
         getPosts();
     },[])
+
+    const handleDelete = async (id) => {
+        await deleteDoc(doc(db, 'posts', id));
+    }
   return (
     <div className='homePage'>
         {postList.map((post) => {
@@ -24,7 +28,7 @@ const Home = () => {
         <div className='postTextcontainer'>{post.postsText}</div>
         <div className='nameAndDeleteButton'>
             <h3>@{post.author.username}</h3>
-            <button>削除</button>
+            <button onClick={() => handleDelete()}>削除</button>
         </div>
         </div>
             )
